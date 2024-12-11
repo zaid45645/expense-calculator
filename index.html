@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income and Expenses</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <h1>Income and Expenses Calculator</h1>
+    
+    <form method="POST">
+        <label for="mon_inc">Monthly Income:</label>
+        <input type="text" id="mon_inc" name="mon_inc" required><br>
+
+        <label for="house">Housing Expenses:</label>
+        <input type="text" id="house" name="house" required><br>
+
+        <label for="trans">Transportation Expenses:</label>
+        <input type="text" id="trans" name="trans" required><br>
+
+        <label for="edu">Education Expenses:</label>
+        <input type="text" id="edu" name="edu" required><br>
+
+        <label for="per">Personal Expenses:</label>
+        <input type="text" id="per" name="per" required><br>
+
+        <input type="submit" value="Calculate">
+    </form>
+
+    {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+    {% endif %}
+
+    {% if income > 0 %}
+        <h2>Your Income: ${{ income }}</h2>
+    {% endif %}
+
+    {% if expenses > 0 %}
+        <h2>Your Total Expenses: ${{ expenses }}</h2>
+    {% endif %}
+
+    {% if expenses > 0 and income > 0 %}
+        <h2>{{ message }}</h2>
+    {% endif %}
+
+</body>
+</html>
