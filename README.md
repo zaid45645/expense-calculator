@@ -1,2 +1,3 @@
 # expense-calculator
-It is a simple expense calculator where you can see your total expense after entering all the inputs!
+It is a simple expense calculator which helps you quickly calculate your expenses.
+The whole project is based around the flask framework, basically all the logic in the project is handled by the flask framework. It is responsible for taking in the inputs and calculating them and giving an output. It manages the inputs, get requests, routes etc for the website. While the html and css are like the bone structure and styling and are responsible for the styling and the buttons and inputs boxes. This was basically my project. Thanks!
